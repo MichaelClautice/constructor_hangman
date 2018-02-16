@@ -1,0 +1,305 @@
+Summary
+
+Advanced JavaScript Assignment: Constructor Hangman
+
+There are 4 files:
+
+• letterConstructor.js
+
+• wordConstructor.js
+
+• randomWordArray.js
+
+• mainGame.js
+
+
+• letterConstructor
+
+• recieves the game player’s letter-guess
+
+• will print-display that letter-guess as a letter value or a blank underscore 
+
+• this constructor will be exported via exports.letterConstructor = letterConstructor;
+
+
+• wordConstructor
+
+• var letterConstruct = require('./letterConstructor');
+
+• game player’s letter-guesses are ‘pushed' into lettersArray
+
+• isCompleteMethod
+• somthing about are there enough letters?
+
+• findLetterMethod
+• converts letter to LC
+• checks for dupe letters
+• guessesMadeString will be populated
+
+• toStringMethod
+• iterates thru the lettersArray & populates a var called output
+
+• this constructor will be exported via exports.wordConstruct = wordConstructor;
+
+
+• randomWordArray.js
+
+• this is where the game gets the random word to guess
+
+• this array will be exported via exports.randomWord = randomWord;
+
+
+• mainGame.js
+
+• this file uses the previous external files
+
+• it requires the inquirer pkg to prompt the game-player for guesses
+
+• but what does it do w the input?
+
+• takeAGuess( ) is called to begin the game
+
+• takeAGuess( ) will:
+
+• prompt the game player for input
+
+• console.log some replys
+
+• it incs a recursive call!!!
+
+
+
+
+MISC
+DO THIS - DONE
+• create a list of the js files:
+
+• guess.js
+
+	• random word selected from an array and exported
+
+• letter.js
+
+	• this is the letter constructor
+
+	• control if letter appears as a blank underscore or as its value
+
+
+• word.js
+
+	• this is the word constructor
+
+	• it uses the letter constructor
+	
+
+• main.js
+
+	• main game that uses-requires:
+
+		• guess.js
+
+		• word.js
+
+		• letter.js
+
+ ||||||||||||||||||||||||||
+
+
+Advanced JavaScript Assignment: Constructor Hangman
+
+OVERVIEW
+
+In this week's assignment, you will create a hangman command-line game using constructor functions.
+
+![Hangman Cli](Images/01-Hangman-Cli.gif)
+
+DO THIS - DONE
+• see previous hangman homework assignment
+
+DO THIS - DONE
+• create a temporary folder for week11-hangman before creating a repo
+
+DO THIS - DONE
+• create a repo in gitHub for week11-hangman
+
+
+||||||||||||||||||||||||||
+
+INSTRUCTIONS
+
+The completed game should meet the following criteria:
+
+• The completed game should be able to receive user input using the `inquirer` or `prompt` npm packages.
+
+• recieve user input args via inquirer or prompt npm packages 
+
+• init & install cmnds
+
+• inquirer or prompt npm packages
+
+DO THIS - DONE
+• CMND LINE
+• use the init & install cmnds in the CLI
+
+DO THIS - DONE
+• CMND LINE
+• install inquirer & prompt npm packages in the CLI
+
+DO THIS - NOT DONE
+• CMND LINE
+• install the exports pkg so it can be used outside in the other files
+• $ npm install exports
+
+
+• Feel free to use as many different types of constructor functions as you are able to, 
+
+but at a minimum, you must create the following constructor functions:
+
+||||||||||||||||||||||||||
+
+
+• Word: 
+• Used to create an object representing the current word the user is attempting to guess. 
+
+• This should contain word specific logic and data.
+
+• The Word constructor
+
+• create a constructor function called word
+
+• word constructor will create an obj-instantiation of the current word the user is trying to guess
+
+• word constructor should be in a separate file
+
+• word constructor file must inc ‘export’
+
+DO THIS - DONE
+• create an empty word.js file
+
+DO THIS - DONE
+• write code for word.js
+
+DO THIS - DONE
+• inc export in the word.js file so it can be used elsewhere
+
+||||||||||||||||||||||||||
+
+
+DO THIS - DONE
+• create an empty main.js file
+• this is the main game that uses the other constructor files
+
+DO THIS - NONE
+• write code for main.js
+
+||||||||||||||||||||||||||
+
+DO THIS - DONE
+• create an empty guess.js file
+• this is a random word from an aray of random words
+
+DO THIS - DONE
+• write code for guess.js
+
+
+||||||||||||||||||||||||||
+
+• Letter: 
+• Used for each letter in the current word. 
+
+• Each letter object should either display an underlying character, or a blank placeholder (such as an underscore), 
+
+depending on whether or not the user has guessed the letter. 
+
+This should contain letter specific logic and data.
+
+• The Letter constructor
+
+• create a constructor function called letter 
+
+• letter constructor will create an obj-instantiation of:
+
+	• an underlying character - if user guesses the correct letter 
+
+		or
+
+	• an underscore as a blank placeholder - if user does NOT guess the correct letter
+
+• letter constructor should be in a separate file
+
+• letter constructor file must inc ‘export’
+
+DO THIS - DONE
+• create an empty letter.js file
+
+DO THIS - DONE
+• write code for letter.js
+
+DO THIS - DONE
+• inc export in the letter.js file so it can be used elsewhere
+
+
+||||||||||||||||||||||||||
+
+
+• You must keep track of the user's remaining guesses 
+
+• The Remaining Guesses Variable
+
+• create a var for remaining guesses
+
+and prompt the user if they would like to end the game if none remain.
+
+• if remaining guesses === 0 {prompt the user if they would like to end the game}
+
+
+||||||||||||||||||||||||||
+
+• Each constructor function should be in it's own file and be exported and required wherever needed.
+
+• ea constructor-function in its own js file
+
+• ea constructor-function js file must inc export
+
+• ea constructor-function js file will be used elsewhere via require
+
+
+||||||||||||||||||||||||||
+
+• Look into [function prototypes](https://www.thecodeship.com/web-development/methods-within-constructor-vs-prototype-in-javascript/) 
+
+DO THIS - DONE
+• study function prototypes here:
+
+• https://www.thecodeship.com/web-development/methods-within-constructor-vs-prototype-in-javascript/ 
+
+and use them for a few of your constructor's methods.
+
+||||||||||||||||||||||||||
+
+NOTES
+
+* Since this assignment is a command-line application, you don't need to deploy it anywhere. You will, however, be required to upload it to Github.
+
+* Remember to include a `package.json` file containing your project dependencies in your Github repo!
+
+my note: init cmnd
+
+||||||||||||||||||||||||||
+
+MINIMUM REQUIREMENTS
+
+Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed.
+
+||||||||||||||||||||||||||
+
+ONE MORE THING
+
+If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
+
+
+||||||||||||||||||||||||||
+
+Copyright
+
+Coding Boot Camp © 2016. All Rights Reserved.
